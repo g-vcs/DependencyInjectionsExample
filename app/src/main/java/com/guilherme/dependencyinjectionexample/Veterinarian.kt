@@ -1,8 +1,9 @@
 package com.guilherme.dependencyinjectionexample
 
 import android.util.Log
+import javax.inject.Inject
 
-class Veterinarian(private val animal: Animal) {
+class Veterinarian @Inject constructor (private val animal: Animal) {
     fun treat() {
         animal.receiveTreatment()
     }
